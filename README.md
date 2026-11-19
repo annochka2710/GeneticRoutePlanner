@@ -7,13 +7,16 @@
 ## Демонстрация проекта
 Форма и ресурсы проекта в репозиторий не включены. В будущем планируется добавить.
 
-Начальное окно программы
+**Начальное окно программы**
 <img width="1529" height="698" alt="image" src="https://github.com/user-attachments/assets/b21208c1-b128-45ce-93f5-3a40e45ad633" />
-Подготовка маршрута
+
+**Подготовка маршрута**
 <img width="1506" height="738" alt="image" src="https://github.com/user-attachments/assets/476068b5-f309-4a57-9245-d5292eed41df" />
-Процесс поиска оптимального маршрута
+
+**Процесс поиска оптимального маршрута**
 <img width="1567" height="657" alt="image" src="https://github.com/user-attachments/assets/666fc385-2390-4c4e-822b-24f81c3484be" />
-Результат программы
+
+**Результат программы**
 <img width="1538" height="705" alt="image" src="https://github.com/user-attachments/assets/1f5b741c-e369-494a-8b67-98dc62f238d0" />
 
 ## Состав
