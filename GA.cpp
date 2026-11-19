@@ -1,12 +1,13 @@
 #include "GA.hpp"
-#include "src/settings.hpp"
+#include "settings.hpp"
 #include <algorithm>
 #include <Geodesy/Math/Ellipsoid>
-#include <cassert>
+#include <stdexcept>
 #include <qapplication.h>
 #include <qdebug.h>
 
 
+Chromosome::Chromosome() = default;
 Chromosome::Chromosome(GA &ga_) : ga(&ga_) {}
 Chromosome::Chromosome(const Chromosome &other) : QVector<PZ_90>(other), fitness(other.fitness), ga(other.ga) {}
 
@@ -26,8 +27,8 @@ double GA::calc_fitness(PZ_90 p1, PZ_90 p2, PZ_90 p3)
 {
     if (p1 == p2) return AgentSettings::inst().MIN_ORTHO_LEN;
     if (p2 == p3) return AgentSettings::inst().MIN_ORTHO_LEN;
-    if (!p1.isValid() || !p2.isValid() || !p3.isValid()) assert("Ошибка. Получены неверные
-точки");
+    if (!p1.isValid() || !p2.isValid())
+        throw std::invalid_argument("GA::calc_fitness: invalid route point");
     CURVE(PZ_90) curve(p1, p2);
 
      if (curve.length() < AgentSettings::inst().MIN_ORTHO_LEN)
@@ -59,6 +60,11 @@ bool isValid__(const Chromosome &points)
         if (!i.isValid()) return false;
      return true;
  }
+
+bool Chromosome::isValid()
+{
+    return ga != nullptr && size() >= 2 && isValid__(*this);
+}
 
     void Chromosome::mutate()
 {

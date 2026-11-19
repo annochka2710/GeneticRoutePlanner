@@ -1,0 +1,50 @@
+# Out-of-source CMake builds and generated files
+/build/
+/build-*/
+/cmake-build-*/
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/CTestTestfile.cmake
+**/Testing/
+**/compile_commands.json
+/CMakeUserPresets.json
+
+# Compiler and Qt-generated files
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.pdb
+*.ilk
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+*.qmlc
+*.jsc
+
+# Local IDE settings
+/.vs/
+/.vscode/
+/.idea/
+*.user
+*.user.*
+*.suo
+
+# Local inputs/outputs referenced in the thesis
+/Zones.bin
+/MissionPlanner/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo

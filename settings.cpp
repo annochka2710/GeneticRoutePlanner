@@ -1,5 +1,7 @@
 #include "settings.hpp"
 #include <QSettings>
+#include <QDebug>
+#include <QTextStream>
 #include <cstdlib>
 #include <qtextcodec.h>
 #include <FileSystemUtils/CSVFile>
@@ -18,6 +20,7 @@ AlgoSettings &AlgoSettings::inst()
 {
      static AlgoSettings settings;
      return settings;
+}
 
 
 
@@ -67,11 +70,10 @@ QString AgentSettings::Debug()
 {
     QString map = "Функция вероятности потери агента от скорости ветра: {\n";
     QTextStream str(&map, QIODevice::WriteOnly);
-    for (auto i = windSpeedToProbabilityDestroy.keyValueBegin(); i != windSpeedToProbabilityDestroy.keyValueEnd(); i++)
-        str << QString(" f(%1)=%2,\n").arg(i.base().key()).arg(i.base().value());
+    for (auto i = windSpeedToProbabilityDestroy.cbegin(); i != windSpeedToProbabilityDestroy.cend(); ++i)
+        str << QString(" f(%1)=%2,\n").arg(i.key()).arg(i.value());
     str << "}\n";
-    return QString("Крейсерская скорость м/с = %1\n").arg(V) + QString("Количество топлива =
-%1\n").arg(GT) +
+    return QString("Крейсерская скорость м/с = %1\n").arg(V) + QString("Количество топлива = %1\n").arg(GT) +
          QString("Расход топлива на км при крейсерской скорости = %1\n").arg(CK) +
          QString("Минимальный угол поворота в градусах = %1\n").arg(MIN_A) + map;
 }

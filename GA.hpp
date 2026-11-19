@@ -1,8 +1,8 @@
 #pragma once
- #include "zones.hpp"
+ #include <QList>
+ #include <QPair>
  #include <qvector.h>
  #include <random>
- #include <sys/types.h>
  #include "settings.hpp"
  #include <Geodesy/Math/GnomonicPoint>
  #include <Geodesy/Math/Spheroid>
