@@ -7,17 +7,29 @@
 ## Демонстрация проекта
 Форма и ресурсы проекта в репозиторий не включены. В будущем планируется добавить.
 
-**Начальное окно программы**
-<img width="1529" height="698" alt="image" src="https://github.com/user-attachments/assets/b21208c1-b128-45ce-93f5-3a40e45ad633" />
+### Начальное окно программы
 
-**Подготовка маршрута**
-<img width="1506" height="738" alt="image" src="https://github.com/user-attachments/assets/476068b5-f309-4a57-9245-d5292eed41df" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b21208c1-b128-45ce-93f5-3a40e45ad633" alt="Начальное окно программы" width="900" />
+</p>
 
-**Процесс поиска оптимального маршрута**
-<img width="1567" height="657" alt="image" src="https://github.com/user-attachments/assets/666fc385-2390-4c4e-822b-24f81c3484be" />
+### Подготовка маршрута
 
-**Результат программы**
-<img width="1538" height="705" alt="image" src="https://github.com/user-attachments/assets/1f5b741c-e369-494a-8b67-98dc62f238d0" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/476068b5-f309-4a57-9245-d5292eed41df" alt="Окно программы на этапе подготовки маршрута" width="900" />
+</p>
+
+### Поиск оптимального маршрута
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/666fc385-2390-4c4e-822b-24f81c3484be" alt="Процесс поиска маршрута генетическим алгоритмом" width="900" />
+</p>
+
+### Построенный маршрут
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1f5b741c-e369-494a-8b67-98dc62f238d0" alt="Построенный воздушный маршрут на карте" width="900" />
+</p>
 
 ## Состав
 
